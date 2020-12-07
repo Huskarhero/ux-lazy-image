@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\LazyImage\Tests;
+namespace Tests\Symfony\UX\LazyImage;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\UX\LazyImage\Tests\Kernel\EmptyAppKernel;
-use Symfony\UX\LazyImage\Tests\Kernel\FrameworkAppKernel;
-use Symfony\UX\LazyImage\Tests\Kernel\TwigAppKernel;
+use Tests\Symfony\UX\LazyImage\Kernel\EmptyAppKernel;
+use Tests\Symfony\UX\LazyImage\Kernel\FrameworkAppKernel;
+use Tests\Symfony\UX\LazyImage\Kernel\TwigAppKernel;
 
 /**
  * @author Titouan Galopin <galopintitouan@gmail.com>

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\UX\LazyImage\Tests\Kernel;
+namespace Tests\Symfony\UX\LazyImage\Kernel;
 
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -35,8 +35,8 @@ class TwigAppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(function (ContainerBuilder $container) {
-            $container->loadFromExtension('framework', ['secret' => '$ecret', 'test' => true]);
-            $container->loadFromExtension('twig', ['default_path' => __DIR__.'/templates', 'strict_variables' => true, 'exception_controller' => null]);
+            $container->loadFromExtension('framework', ['secret' => '$ecret']);
+            $container->loadFromExtension('twig', ['default_path' => __DIR__.'/templates']);
 
             $container->setAlias('test.lazy_image.blur_hash', 'lazy_image.blur_hash')->setPublic(true);
         });

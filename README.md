@@ -37,6 +37,9 @@ page has been rendered:
     {{ stimulus_controller('symfony/ux-lazy-image/lazy-image') }}
     data-hd-src="{{ asset('image/large.png') }}"
 
+    srcset="{{ asset('image/small.png') }} 1x, {{ asset('image/small2x.png') }} 2x"
+    data-hd-srcset="{{ asset('image/large.png') }} 1x, {{ asset('image/large2x.png') }} 2x"
+
     {# Optional but avoids having a page jump when the image is loaded #}
     width="200"
     height="150"
@@ -78,7 +81,7 @@ Symfony UX LazyImage allows you to extend its default behavior using a custom St
 ```js
 // mylazyimage_controller.js
 
-import { Controller } from 'stimulus';
+import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
     connect() {
@@ -109,7 +112,7 @@ Then in your template, add your controller to the HTML attribute:
     src="{{ data_uri_thumbnail('public/image/large.png', 100, 75) }}"
     {{ stimulus_controller({
         mylazyimage: {},
-        'symfony/ux-lazy-image/lazy-image: {}
+        'symfony/ux-lazy-image/lazy-image': {}
     }) }}
     data-hd-src="{{ asset('image/large.png') }}"
 

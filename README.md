@@ -78,7 +78,7 @@ Symfony UX LazyImage allows you to extend its default behavior using a custom St
 ```js
 // mylazyimage_controller.js
 
-import { Controller } from '@hotwired/stimulus';
+import { Controller } from 'stimulus';
 
 export default class extends Controller {
     connect() {
@@ -109,7 +109,7 @@ Then in your template, add your controller to the HTML attribute:
     src="{{ data_uri_thumbnail('public/image/large.png', 100, 75) }}"
     {{ stimulus_controller({
         mylazyimage: {},
-        'symfony/ux-lazy-image/lazy-image': {}
+        'symfony/ux-lazy-image/lazy-image: {}
     }) }}
     data-hd-src="{{ asset('image/large.png') }}"
 

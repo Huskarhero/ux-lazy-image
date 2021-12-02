@@ -18,12 +18,12 @@ namespace Symfony\UX\LazyImage\Tests\Kernel;
  */
 trait AppKernelTrait
 {
-    public function getCacheDir(): string
+    public function getCacheDir()
     {
         return $this->createTmpDir('cache');
     }
 
-    public function getLogDir(): string
+    public function getLogDir()
     {
         return $this->createTmpDir('logs');
     }

@@ -26,7 +26,7 @@ class FrameworkAppKernel extends Kernel
 {
     use AppKernelTrait;
 
-    public function registerBundles(): iterable
+    public function registerBundles()
     {
         return [new FrameworkBundle(), new LazyImageBundle()];
     }
